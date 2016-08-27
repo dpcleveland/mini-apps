@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Form Validation</title>
+        <link href="style.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+            <form id="hobbies-form" name="hobbiesForm" action="#">
+                <label for="name">Name:</label>
+                <input type="text" name="name"><br/>
+                <label>Hobbies</label><br/>
+                <input type="checkbox" name="biking" value="biking">Biking<br/>
+                <input type="checkbox" name="skiing" value="skiing">Skiing<br/>
+                <input type="checkbox" name="swimming" value="swimming">Swimming<br/>
+                <label for="color">Favorite color:</label>
+                <select name="color">
+                    <option>Red</option>
+                    <option>Blue</option>
+                    <option>Green</option>
+                </select>
+                <input type="submit" name="submit" value="Submit">
+            </form>
+
+            <div id="message" style="color: red;"></div>
+
+            <script src="scripts.js"></script>
+        </body>
+    </html>
