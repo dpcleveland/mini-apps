@@ -1,21 +1,26 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     function setUserName() {
-        // make dynamic
+        // make dynamic based on user input
         var userName = "Daniel";
+
         return userName;
     }
 
-    function setRESTLink(user) {
-        var userRESTLink = 'http://rest.learncode.academy/api/' + username + '/crud';
+    function setRESTLink() {
+        var userName = setUserName();
+
+        var userRESTLink = 'http://rest.learncode.academy/api/' + userName + '/crud/';
 
         return userRESTLink;
     }
 
+    var userRESTLink = setRESTLink();
+
     function showTasks() {
         $.ajax({
             type: 'GET',
-            url: 'http://rest.learncode.academy/api/' + username + '/crud',
+            url: userRESTLink,
             success: function(data) {
                 console.log("I have tasks!", data);
             }
@@ -25,13 +30,42 @@ document.addEventListener('DOMContentLoaded', function() {
     function addTask() {
         $.ajax({
             type: 'POST',
-            url: 'http://rest.learncode.academy/api/dpcleveland/crud',
+            url: userRESTLink,
             data: {
-                name: 'Billy Bob',
-                age: 27
+                // Add dynamically
+                task: 'Get milk',
+                priority: 'Low'
             },
             success: function(data) {
-                console.log("Friend added!", data); //the new item is returned with an ID
+                console.log("Task added!", data); //the new item is returned with an ID
+            }
+        });
+    }
+
+    function updateTask() {
+        $.ajax({
+            type: 'PUT',
+            data: {
+                task: 'Get cereal',
+                priority: 'Low'
+            },
+            // Make ID dynamic
+            url: userRESTLink + '1',
+            success: function() {
+                //no data...just a success (200) status code
+                console.log('Task Updated Successfully!');
+            }
+        });
+    }
+
+    function deleteTask() {
+        $.ajax({
+            type: 'DELETE',
+            // Make ID dynamic
+            url: userRESTLink + '1',
+            success: function() {
+                //no data...just a success (200) status code
+                console.log('Task Deleted Successfully!');
             }
         });
     }
