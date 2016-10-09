@@ -7,15 +7,14 @@ document.addEventListener('DOMContentLoaded', function() {
         return userName;
     }
 
-    function setRESTLink() {
-        var userName = setUserName();
+    function setRESTLink(userName) {
 
         var userRESTLink = 'http://rest.learncode.academy/api/' + userName + '/crud/';
 
         return userRESTLink;
     }
 
-    var userRESTLink = setRESTLink();
+    var userRESTLink = setRESTLink(setUserName());
 
     function showTasks() {
         $.ajax({
