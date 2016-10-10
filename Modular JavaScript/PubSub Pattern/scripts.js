@@ -1,4 +1,9 @@
-// Revealing Module Pattern
+// PubSub Pattern
+// https://www.youtube.com/watch?v=nQRXi1SVOow&list=PLoYCgNOIyGABs-wDaaxChu82q_xQgUb4f&index=4
+/*
+The pubsub design pattern (publish/subscribe), allows us to decouple our modules. Once integrated with our pubsub module, they can emit events and not have to worry about which modules depend on them. Modules can subscribe to events and be notified when any module publishes.
+*/
+
 var tasks = (function() {
     var tasks = ['Clean', 'Shop'];
 
