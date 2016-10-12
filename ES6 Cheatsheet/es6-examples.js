@@ -192,3 +192,58 @@ class Child extends Parent {
 
 var child = new Child();
 child.bar();
+
+////////////////////////////////////////////////
+// arrow functions
+
+// old way
+var foo = function(a, b) {
+    return a + b;
+}
+
+// new way
+var foo = (a, b) => {
+    return a + b;
+}
+
+// helps with callbacks
+
+// old way
+do.something(function(a, b) {
+    return a + b;
+})
+
+// new way
+do.something((a, b) => { return a + b; })
+// with implicit returns (only for one liners)
+do.something((a, b) => a + b)
+// if only one argument, on one line
+do.something(a => a++)
+[0,1,2].map(val => val++); // [1, 2, 3];
+
+// lexical context binding
+
+// old way
+var module = {
+    age: 26,
+    foo: function() {
+        setTimeout(function() {
+            console.log(this.age);
+        }.bind(this), 1000);
+    }
+};
+
+module.foo(); // 26 after a second
+
+// new way arrow functions automatically bind 'this'
+
+var module = {
+    age: 26,
+    foo: function() {
+        setTimeout(() => {
+            console.log(this.age);
+        }, 1000);
+    }
+};
+
+module.foo();
