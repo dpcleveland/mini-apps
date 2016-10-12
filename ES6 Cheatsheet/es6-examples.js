@@ -104,3 +104,44 @@ var greet = 'hi, my name is ' + name + 'and I like to ' + thing + '.';
 
 // new way
 var greet = `hi, my name is ${name} and I like to ${thing}!`;
+
+////////////////////////////////////////////////
+// block scoping
+
+// old way
+var a = 1;
+
+function() {
+    var b = 2;
+}
+console.log(b); // doesn't work
+
+if (true) {
+    var b = 2;
+}
+console.log(b); // 2
+
+// new way
+
+var a = 1; // let is the new var
+
+if (true) {
+    let b = 2; // only used within block
+}
+
+console.log(b); // doesn't work
+
+for (20) {
+    let b = 2; // gets destroyed and recreated each loop
+}
+
+const foo = 1;
+
+if (true) {
+    const bar = 2; // block scoped
+    bar = 3; // error - can't change const
+}
+
+console.log(bar); // not defined
+
+// use const for everything. if you have to change value then use let
