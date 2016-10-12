@@ -145,3 +145,50 @@ if (true) {
 console.log(bar); // not defined
 
 // use const for everything. if you have to change value then use let
+
+////////////////////////////////////////////////
+// classes
+
+// old way
+function Parent() {
+    // constructor
+
+}
+Parent.prototype.foo = function() {}
+Parent.prototype.bar = function() {}
+
+// new way
+class Parent {
+    age = 34; // es7 define static class properties
+
+    constructor() {
+
+    }
+
+    static foo() {
+
+    }
+
+    bar() {
+
+    }
+}
+
+var parent = new Parent();
+parent.foo();
+parent.age // 34 in es7
+
+Parent.foo(); // correlates to the static foo()
+
+class Child extends Parent {
+    constructor() {
+        super()
+    }
+
+    baz() {
+
+    }
+}
+
+var child = new Child();
+child.bar();
