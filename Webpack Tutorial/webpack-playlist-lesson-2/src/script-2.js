@@ -1,1 +1,3 @@
-module.exports = 'tempus fugits';
+const mssg = 'tempus fugits';
+
+module.exports = mssg;
