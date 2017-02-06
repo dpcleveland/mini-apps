@@ -48,3 +48,33 @@ console.log(s);
 
 ////////////////
 
+"use strict";
+// change code below this line
+let magic = () => new Date();
+// change code above this line
+// test your code
+console.log(magic());
+
+////////////////
+
+"use strict";
+// change code below this line
+let myConcat = (arr1, arr2) => arr1.concat(arr2);
+
+// change code above this line
+// test your code
+console.log(myConcat([1, 2], [3, 4, 5]));
+
+////////////////
+
+"use strict";
+const realNumberArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34];
+// change code below this line
+let squaredIntegers = realNumberArray.filter((item) => item > 0 && item % 1 == 0).map((item) => item * item);
+// change code above this line
+// test your code
+console.log(squaredIntegers);
+
+////////////////
+
+
