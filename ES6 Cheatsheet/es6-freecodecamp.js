@@ -86,3 +86,12 @@ console.log(increment(5)); // returns NaN
 
 ////////////////
 
+"use strict";
+function sum(...args) {
+  const array = args;
+  return array.reduce((a, b) => a + b, 0);
+}
+console.log(sum(1, 2, 3)); // 6
+
+////////////////
+
