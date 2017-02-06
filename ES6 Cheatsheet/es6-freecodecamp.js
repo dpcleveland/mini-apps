@@ -95,3 +95,14 @@ console.log(sum(1, 2, 3)); // 6
 
 ////////////////
 
+"use strict";
+const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
+/* Alter code below this line */
+const arr2 = [];
+arr2.push(...arr1); // change this
+/* Alter code above this line */
+arr1.push('JUN');
+console.log(arr2); // should not be affected
+
+////////////////
+
