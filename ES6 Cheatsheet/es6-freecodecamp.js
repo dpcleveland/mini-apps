@@ -160,6 +160,23 @@ console.log(half(stats)); // should be 28.015
 ////////////////
 
 
+const result = {
+  success: ['max_length', 'no-amd', 'prefer-arrow-functions'],
+  failure: ['no-var', 'var-on-top', 'linebreak'],
+  skipped: ['id-blacklist', 'no-dup-keys']
+}
+/* Alter code below this line */
+const resultDisplay = result.failure.map((item) => `<li class="text-warning">${item}</li>`);
+/* Alter code above this line */
+console.log(resultDisplay);
+/**
+ *
+ * should look like this
+ * <li class="text-warning">no-var</li>
+ *  <li class="text-warning">var-on-top</li>
+ *  <li class="text-warning">linebreak</li>
+ **/
+
 
 ////////////////
 
