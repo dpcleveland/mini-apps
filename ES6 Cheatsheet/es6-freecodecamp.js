@@ -106,3 +106,63 @@ console.log(arr2); // should not be affected
 
 ////////////////
 
+"use strict";
+const forecast = {
+  today: { min: 72, max: 83},
+  tomorrow: {min: 73.3, max: 84.6}
+}
+/* Alter code below this line */
+const { tomorrow: { max: max_of_tomorrow }} = forecast; // change this
+/* Alter code above this line */
+console.log(max_of_tomorrow); // should be 84.6 destructuring
+
+////////////////
+
+"use strict";
+let a = 8, b = 6;
+/* Alter code below this line */
+[b, a] = [a, b];
+
+/* Alter code above this line */
+console.log(a); // should be 6
+console.log(b); // should be 8
+
+////////////////
+
+"use strict";
+const source = [1,2,3,4,5,6,7,8,9,10];
+/* Alter code below this line */
+
+const [a, b, ...arr] = source ; // change this
+/* Alter code above this line */
+console.log(arr); // should be [3,4,5,6,7,8,9,10]
+console.log(source); // should be [1,2,3,4,5,6,7,8,9,10];
+
+////////////////
+
+
+const stats = {
+  max: 56.78,
+  standard_deviation: 4.34,
+  median: 34.54,
+  mode: 23.87,
+  min: -0.75,
+  average: 35.85
+}
+/* Alter code below this line */
+const half = ({max, min}) => ((stats.max + stats.min) / 2.0); // use function argument destructurung
+/* Alter code above this line */
+console.log(stats); // should be object
+console.log(half(stats)); // should be 28.015
+
+
+
+////////////////
+
+
+
+////////////////
+
+
+
+////////////////
