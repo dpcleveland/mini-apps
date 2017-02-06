@@ -21,4 +21,30 @@ console.log(newCampers[2].roleCall());
 
 ////////////////
 
+"use strict";
+// change 'var' to 'let' or 'const'
+// rename constant variables
+const PI = 3.14;
+const RADIUS = 10;
+let calulateCircumference = function(r) {
+  let diameter = 2 * r;
+  let result = PI * diameter;
+  return result;
+};
+// Test your code
+console.log(calulateCircumference(RADIUS));
+
+////////////////
+
+"use strict";
+const s = [ 5, 7, 2 ];
+// change code below this line
+s[0] = [2];
+s[1] = [5];
+s[2] = [7];
+// change code above this line
+// Test your code
+console.log(s);
+
+////////////////
 
